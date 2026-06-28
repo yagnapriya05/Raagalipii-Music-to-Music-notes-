@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7f1ea;
+    background-image:url("background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:100vh;
+    color:#4e3317;
+}
+
+.container{
+    display:flex;
+    gap:20px;
+    padding:18px;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:250px;
+    background:rgba(255,255,255,0.45);
+    border:1px solid #e5c8a5;
+    border-radius:24px;
+    padding:24px 18px;
+    backdrop-filter:blur(10px);
+}
+
+.logo-section{
+    text-align:center;
+}
+
+.logo{
+    width:140px;
+    height:140px;
+    object-fit:contain;
+    margin-bottom:10px;
+}
+
+.logo-section h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    font-weight:700;
+}
+
+.logo-section p{
+    letter-spacing:3px;
+    font-size:12px;
+    margin-top:10px;
+}
+
+.menu{
+    margin-top:35px;
+}
+
+.menu-item{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:18px;
+    border:1px solid #ebd4b7;
+    border-radius:18px;
+    margin-bottom:16px;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.3s;
+    background:white;
+}
+
+.menu-item:hover{
+    transform:translateY(-2px);
+}
+
+.menu-item i{
+    color:#b57a28;
+}
+
+.active{
+    background:#f7e6cc;
+}
+
+/* MAIN */
+.main-content{
+    flex:1;
+}
+
+.hero-section{
+    text-align:center;
+    margin-top:10px;
+}
+
+.hero-section h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:72px;
+    line-height:1;
+    font-weight:700;
+}
+
+.hero-section p{
+    font-size:24px;
+    margin-top:15px;
+}
+
+/* UPLOAD CARD */
+.upload-card{
+    margin-top:25px;
+    display:flex;
+    gap:20px;
+    background:rgba(255,255,255,0.6);
+    border:1px solid #e6caa7;
+    border-radius:30px;
+    padding:24px;
+    backdrop-filter:blur(10px);
+}
+
+.upload-box{
+    width:320px;
+    border:2px dashed #d4a15c;
+    border-radius:25px;
+    padding:40px 20px;
+    text-align:center;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.upload-box i{
+    font-size:55px;
+    color:#b57a28;
+    margin-bottom:20px;
+}
+
+.upload-box h3{
+    font-size:22px;
+    font-weight:500;
+    margin-bottom:15px;
+}
+
+.upload-box span{
+    display:block;
+    margin-bottom:15px;
+}
+
+.upload-box button{
+    background:linear-gradient(to bottom,#ebb257,#c9871f);
+    border:none;
+    color:white;
+    padding:14px 35px;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.upload-box p{
+    margin-top:22px;
+    font-size:14px;
+}
+
+.audio-section{
+    flex:1;
+}
+
+.audio-file{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    border:1px solid #ead4b7;
+    border-radius:18px;
+    padding:18px;
+}
+
+.song-info{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.song-icon{
+    width:50px;
+    height:50px;
+    background:#f8ebd7;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#b57a28;
+    font-size:20px;
+}
+
+.song-info h4{
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.song-info span{
+    font-size:14px;
+}
+
+.trash{
+    color:#b57a28;
+    font-size:22px;
+}
+
+.waveform{
+    margin-top:18px;
+    height:90px;
+    border-radius:18px;
+    background:
+    repeating-linear-gradient(
+        90deg,
+        #e6a845 0px,
+        #e6a845 3px,
+        transparent 3px,
+        transparent 8px
+    );
+    opacity:0.7;
+}
+
+/* STEPS */
+.steps{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:25px;
+}
+
+.step{
+    text-align:center;
+}
+
+.circle{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:2px solid #c99a56;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    background:white;
+    font-weight:600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.active-step .circle{
+    background:#c98d2f;
+    color:white;
+}
+
+.line{
+    flex:1;
+    height:2px;
+    background:#d9bc91;
+    margin:0 8px;
+}
+
+.step p{
+    margin-top:10px;
+    font-size:14px;
+}
+
+/* SWARA */
+.swara-box{
+    margin-top:25px;
+    background:white;
+    border:1px solid #e8d3b6;
+    border-radius:18px;
+    padding:24px;
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+
+.swara-box i{
+    font-size:36px;
+    color:#b57a28;
+}
+
+.swaras{
+    font-family:'Cormorant Garamond',serif;
+    font-size:42px;
+    letter-spacing:8px;
+}
+
+/* BUTTONS */
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:24px;
+}
+
+.action-buttons button{
+    width:220px;
+    padding:18px;
+    border-radius:18px;
+    border:1px solid #e6cfb0;
+    background:white;
+    font-size:26px;
+    color:#5b3714;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.action-buttons button:hover{
+    transform:translateY(-2px);
+}
+
+.action-buttons i{
+    color:#b57a28;
+    margin-right:10px;
+}
+
+/* PLAYER */
+.music-player{
+    margin-top:25px;
+    background:white;
+    border:1px solid #e8d3b6;
+    border-radius:22px;
+    padding:18px 28px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.controls{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.play-btn{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:linear-gradient(to bottom,#ebb257,#c9871f);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:20px;
+}
+
+.progress-bar{
+    flex:1;
+    height:5px;
+    background:#ead6bc;
+    border-radius:10px;
+    position:relative;
+}
+
+.progress{
+    width:25%;
+    height:100%;
+    background:#cf9133;
+    border-radius:10px;
+}
+
+/* HOW IT WORKS */
+.how-it-works{
+    margin-top:35px;
+    background:rgba(255,255,255,0.55);
+    border:1px solid #e5c8a5;
+    border-radius:26px;
+    padding:30px;
+}
+
+.how-it-works h2{
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:42px;
+    margin-bottom:28px;
+}
+
+.work-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+}
+
+.work-card{
+    background:white;
+    border:1px solid #ecd5b8;
+    border-radius:22px;
+    padding:24px;
+    position:relative;
+}
+
+.work-icon{
+    width:62px;
+    height:62px;
+    border-radius:50%;
+    background:#f7e7ce;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    color:#b57a28;
+    margin-bottom:18px;
+}
+
+.work-card h3{
+    font-size:22px;
+    margin-bottom:14px;
+    color:#b57a28;
+}
+
+.work-card p{
+    line-height:1.7;
+    font-size:15px;
+}
+
+/* RIGHT PANEL */
+.profile-panel{
+    width:280px;
+    background:rgba(255,255,255,0.45);
+    border:1px solid #e5c8a5;
+    border-radius:24px;
+    padding:24px;
+    backdrop-filter:blur(10px);
+}
+
+.profile-panel h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:42px;
+}
+
+.profile-card{
+    text-align:center;
+    margin-top:25px;
+    padding-bottom:25px;
+    border-bottom:1px solid #e8d7c1;
+}
+
+.profile-icon{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    border:2px solid #d3a15c;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    color:#b57a28;
+}
+
+.profile-card h3{
+    margin-top:20px;
+    font-size:26px;
+}
+
+.premium-btn{
+    margin-top:14px;
+    background:#f5dfbf;
+    border:none;
+    color:#8b5a12;
+    padding:10px 18px;
+    border-radius:10px;
+    font-size:15px;
+}
+
+.profile-card p{
+    margin-top:18px;
+}
+
+.subscription{
+    margin-top:30px;
+}
+
+.subscription h3{
+    font-size:30px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.subscription-card{
+    margin-top:18px;
+    background:white;
+    border:1px solid #ead3b5;
+    border-radius:20px;
+    padding:20px;
+}
+
+.subscription-card h4{
+    font-size:24px;
+}
+
+.subscription-card p{
+    margin-top:12px;
+    line-height:1.7;
+}
+
+.subscription-card button{
+    margin-top:18px;
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(to bottom,#ebb257,#c9871f);
+    color:white;
+    font-size:17px;
+}
+
+/* RECENT */
+.recent-activity{
+    margin-top:32px;
+}
+
+.activity-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.activity-head h3{
+    font-size:30px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.activity-head span{
+    color:#b57a28;
+    cursor:pointer;
+}
+
+.activity-item{
+    display:flex;
+    gap:14px;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.music-box{
+    width:52px;
+    height:52px;
+    border-radius:12px;
+    background:#f5e5ca;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#b57a28;
+    font-size:20px;
+}
+
+.activity-item h4{
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.activity-item p{
+    font-size:13px;
+}
+
+/* =========================================================
+   NEW PIPELINE COMPATIBILITY UPDATES FOR FILE1.PY
+   ========================================================= */
+
+/* 1. Dynamic Visualization Plot Layout Structures */
+.visualization-results {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ead4b7;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.visualization-results div h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5b3714 !important; /* Forces visible font color over dark image backgrounds */
+    margin-bottom: 8px;
+}
+
+.visualization-results img {
+    border: 1px solid #e6caa7;
+    box-shadow: 0 4px 12px rgba(91, 55, 20, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.visualization-results img:hover {
+    transform: scale(1.01); /* Micro-interaction highlight on image focus */
+}
+
+/* 2. Drag over highlights for files dropped inside #dropZone */
+.upload-box.dragover {
+    border-color: #c9871f;
+    background: rgba(247, 230, 204, 0.4);
+}
+
+/* RESPONSIVE */
+@media(max-width:1400px){
+    .container{
+        flex-direction:column;
+    }
+    .sidebar,
+    .profile-panel{
+        width:100%;
+    }
+    .work-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .upload-card{
+        flex-direction:column;
+    }
+    .upload-box{
+        width:100%;
+    }
+}
+
+@media(max-width:768px){
+    .hero-section h1{
+        font-size:42px;
+    }
+    .hero-section p{
+        font-size:18px;
+    }
+    .work-grid{
+        grid-template-columns:1fr;
+    }
+    .action-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+    .music-player{
+        flex-wrap:wrap;
+    }
+}
